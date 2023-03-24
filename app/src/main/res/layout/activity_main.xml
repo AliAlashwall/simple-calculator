@@ -21,7 +21,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Mul"
         style="@style/CalculatorButton.Operation"
@@ -56,12 +55,11 @@
         app:layout_constraintTop_toTopOf="@+id/Button_Plus" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Button_R_div"
+        android:id="@+id/Button_Rem"
         style="@style/CalculatorButton.Operation"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:text="%"
-        android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="@+id/Button_Plus_Minus"
         app:layout_constraintStart_toStartOf="@+id/Button_Plus_Minus"
         app:layout_constraintTop_toTopOf="@+id/Number_1" />
@@ -104,7 +102,7 @@
         android:layout_height="64dp"
         android:text="="
         app:layout_constraintBottom_toBottomOf="@+id/dot"
-        app:layout_constraintEnd_toEndOf="@+id/Button_R_div"
+        app:layout_constraintEnd_toEndOf="@+id/Button_Rem"
         app:layout_constraintStart_toStartOf="@+id/Number_3"
         app:layout_constraintTop_toTopOf="@+id/zero" />
 
