@@ -31,7 +31,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Button_minus"
         app:layout_constraintTop_toTopOf="@+id/Button_Plus" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Plus"
         style="@style/CalculatorButton.Operation"
@@ -42,7 +41,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Div"
         style="@style/CalculatorButton.Operation"
@@ -53,7 +51,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Button_Mul"
         app:layout_constraintTop_toTopOf="@+id/Button_Plus" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Rem"
         style="@style/CalculatorButton.Operation"
@@ -63,7 +60,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Button_Plus_Minus"
         app:layout_constraintStart_toStartOf="@+id/Button_Plus_Minus"
         app:layout_constraintTop_toTopOf="@+id/Number_1" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_C"
         style="@style/CalculatorButton.Operation"
@@ -73,7 +69,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Button_Div"
         app:layout_constraintStart_toStartOf="@+id/Button_Div"
         app:layout_constraintTop_toTopOf="@+id/Number_7" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Plus_Minus"
         style="@style/CalculatorButton.Operation"
@@ -83,7 +78,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Button_C"
         app:layout_constraintStart_toStartOf="@+id/Button_C"
         app:layout_constraintTop_toTopOf="@+id/Number_6" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_minus"
         style="@style/CalculatorButton.Operation"
@@ -94,7 +88,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Button_Plus"
         app:layout_constraintTop_toTopOf="@+id/Button_Plus" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Result"
         style="@style/CalculatorButton.Result"
@@ -105,7 +98,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Button_Rem"
         app:layout_constraintStart_toStartOf="@+id/Number_3"
         app:layout_constraintTop_toTopOf="@+id/zero" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_9"
         style="@style/CalculatorButton.Number"
@@ -116,7 +108,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Button_Mul"
         app:layout_constraintStart_toStartOf="@+id/Button_Mul"
         app:layout_constraintTop_toTopOf="@+id/Number_7" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_8"
         style="@style/CalculatorButton.Number"
@@ -127,7 +118,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Button_minus"
         app:layout_constraintStart_toStartOf="@+id/Button_minus"
         app:layout_constraintTop_toTopOf="@+id/Number_7" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_7"
         style="@style/CalculatorButton.Number"
@@ -138,7 +128,6 @@
         android:onClick="onClick"
         app:layout_constraintStart_toStartOf="@+id/Button_Plus"
         app:layout_constraintTop_toBottomOf="@+id/Button_Plus" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_6"
         style="@style/CalculatorButton.Number"
@@ -150,7 +139,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_7"
         app:layout_constraintStart_toStartOf="@+id/Number_7"
         app:layout_constraintTop_toBottomOf="@+id/Number_7" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_5"
         style="@style/CalculatorButton.Number"
@@ -161,7 +149,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_8"
         app:layout_constraintStart_toStartOf="@+id/Number_8"
         app:layout_constraintTop_toTopOf="@+id/Number_6" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_4"
         style="@style/CalculatorButton.Number"
@@ -172,7 +159,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_9"
         app:layout_constraintStart_toStartOf="@+id/Number_9"
         app:layout_constraintTop_toTopOf="@+id/Number_6" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_3"
         style="@style/CalculatorButton.Number"
@@ -184,7 +170,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Number_4"
         app:layout_constraintTop_toTopOf="@+id/Number_1" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_2"
         style="@style/CalculatorButton.Number"
@@ -195,7 +180,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_5"
         app:layout_constraintStart_toStartOf="@+id/Number_5"
         app:layout_constraintTop_toTopOf="@+id/Number_1" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Number_1"
         style="@style/CalculatorButton.Number"
@@ -207,7 +191,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_6"
         app:layout_constraintStart_toStartOf="@+id/Number_6"
         app:layout_constraintTop_toBottomOf="@+id/Number_6" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/zero"
         style="@style/CalculatorButton.Number"
@@ -219,7 +202,6 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_1"
         app:layout_constraintStart_toStartOf="@+id/Number_1"
         app:layout_constraintTop_toBottomOf="@+id/Number_1" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/dot"
         style="@style/CalculatorButton.Number"
@@ -230,5 +212,4 @@
         app:layout_constraintEnd_toEndOf="@+id/Number_2"
         app:layout_constraintStart_toStartOf="@+id/Number_2"
         app:layout_constraintTop_toTopOf="@+id/zero" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

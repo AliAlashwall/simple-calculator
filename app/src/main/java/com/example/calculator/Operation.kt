@@ -4,5 +4,6 @@ enum class Operation {
     Plus,
     Minus,
     Div,
-    Mul
+    Mul,
+    Rem
 }
