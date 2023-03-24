@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var buttonMul :Button
     lateinit var buttonC : Button
     lateinit var buttonResult :Button
+    lateinit var buttonPlusMinus : Button
     lateinit var textNumber : TextView
-
+    lateinit var buttonRem :Button
     var lastNumber :Double = 0.0
     var currentOperation :Operation? = null
 
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         buttonMul = findViewById(R.id.Button_Mul)
         buttonResult = findViewById(R.id.Button_Result)
         buttonC = findViewById(R.id.Button_C)
+        buttonPlusMinus = findViewById(R.id.Button_Plus_Minus)
+        buttonRem = findViewById(R.id.Button_Rem)
         textNumber = findViewById(R.id.textView2)
     }
     private fun clearInput(){
@@ -59,8 +62,16 @@ class MainActivity : AppCompatActivity() {
                 textNumber.text = result.toString()
             }
         }
+        buttonPlusMinus.setOnClickListener{
+            val num = textNumber.text.toString().toDouble()
+            if(num != 0.0){
+                textNumber.text= (num * -1).toString()
+            }
+        }
+        buttonRem.setOnClickListener{
+            prepareOperation(Operation.Rem)
+        }
     }
-
     private fun prepareOperation(operation: Operation) {
         if (checkValidity()){
             lastNumber = textNumber.text.toString().toDouble()
@@ -75,6 +86,7 @@ class MainActivity : AppCompatActivity() {
             Operation.Minus -> lastNumber - currentNumber
             Operation.Div -> lastNumber / currentNumber
             Operation.Mul -> lastNumber * currentNumber
+            Operation.Rem -> lastNumber % currentNumber
             else -> 0.0
         }
     }
