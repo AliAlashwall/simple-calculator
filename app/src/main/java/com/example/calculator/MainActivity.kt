@@ -4,83 +4,65 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.TextView
+
+import com.example.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var buttonPlus :Button
-    lateinit var buttonMinus :Button
-    lateinit var buttonDiv :Button
-    lateinit var buttonMul :Button
-    lateinit var buttonC : Button
-    lateinit var buttonResult :Button
-    lateinit var buttonPlusMinus : Button
-    lateinit var textNumber : TextView
-    lateinit var buttonRem :Button
+    lateinit var binding : ActivityMainBinding
     var lastNumber :Double = 0.0
     var currentOperation :Operation? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initView()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         addCallBack()
     }
-    private fun initView(){
-        buttonPlus = findViewById(R.id.Button_Plus)
-        buttonMinus =  findViewById(R.id.Button_minus)
-        buttonDiv = findViewById(R.id.Button_Div)
-        buttonMul = findViewById(R.id.Button_Mul)
-        buttonResult = findViewById(R.id.Button_Result)
-        buttonC = findViewById(R.id.Button_C)
-        buttonPlusMinus = findViewById(R.id.Button_Plus_Minus)
-        buttonRem = findViewById(R.id.Button_Rem)
-        textNumber = findViewById(R.id.textView2)
-    }
     private fun clearInput(){
-        textNumber.text = ""
+        binding.textView2.text = ""
     }
     private fun addCallBack(){
-        buttonC.setOnClickListener{
+        binding.ButtonC.setOnClickListener{
             clearInput()
         }
-        buttonPlus.setOnClickListener{
+        binding.ButtonPlus.setOnClickListener{
             prepareOperation(Operation.Plus)
         }
-        buttonMinus.setOnClickListener{
-            textNumber.text = "-"
+        binding.ButtonMinus.setOnClickListener{
+            binding.textView2.text = "-"
             prepareOperation(Operation.Minus)
         }
-        buttonDiv.setOnClickListener{
+        binding.ButtonDiv.setOnClickListener{
             prepareOperation(Operation.Div)
         }
-        buttonMul.setOnClickListener{
+        binding.ButtonMul.setOnClickListener{
             prepareOperation(Operation.Mul)
         }
-        buttonResult.setOnClickListener{
+        binding.ButtonResult.setOnClickListener{
             if (checkValidity()){
                 val result = doOperation()
-                textNumber.text = result.toString()
+                binding.textView2.text = result.toString()
             }
         }
-        buttonPlusMinus.setOnClickListener{
-            val num = textNumber.text.toString().toDouble()
+        binding.ButtonPlusMinus.setOnClickListener{
+            val num = binding.textView2.text.toString().toDouble()
             if(num != 0.0){
-                textNumber.text= (num * -1).toString()
+                binding.textView2.text= (num * -1).toString()
             }
         }
-        buttonRem.setOnClickListener{
+        binding.ButtonRem.setOnClickListener{
             prepareOperation(Operation.Rem)
         }
     }
     private fun prepareOperation(operation: Operation) {
         if (checkValidity()){
-            lastNumber = textNumber.text.toString().toDouble()
+            lastNumber = binding.textView2.text.toString().toDouble()
             clearInput()
             currentOperation = operation
         }
     }
     private fun doOperation() :Double{
-        val currentNumber = textNumber.text.toString().toDouble()
+        val currentNumber = binding.textView2.text.toString().toDouble()
         return when(currentOperation){
             Operation.Plus -> lastNumber + currentNumber
             Operation.Minus -> lastNumber - currentNumber
@@ -92,11 +74,11 @@ class MainActivity : AppCompatActivity() {
     }
     fun onClick(v: View){
         val newDigit = (v as Button).text.toString()
-        val currentDigits = textNumber.text.toString()
+        val currentDigits = binding.textView2.text.toString()
         val digits = currentDigits + newDigit
-        textNumber.text = digits
+        binding.textView2.text = digits
     }
     private fun checkValidity():Boolean{
-        return textNumber.text != "" && textNumber.text != "-"
+        return binding.textView2.text != "" && binding.textView2.text != "-"
     }
 }
